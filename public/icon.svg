@@ -1,0 +1,57 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1528"/>
+      <stop offset="100%" style="stop-color:#0a0a0f"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c6ef0"/>
+      <stop offset="100%" style="stop-color:#9c6ef0"/>
+    </linearGradient>
+    <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#e0d9ff"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3ecf8e;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#7c6ef0;stop-opacity:0.1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#7c6ef0" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <rect width="512" height="512" rx="112" fill="url(#glowGrad)" opacity="0.5"/>
+
+  <!-- Glow circle behind icon -->
+  <circle cx="256" cy="256" r="160" fill="rgba(124,110,240,0.08)"/>
+  <circle cx="256" cy="256" r="120" fill="rgba(124,110,240,0.06)"/>
+
+  <!-- Main icon circle -->
+  <circle cx="256" cy="256" r="110" fill="url(#iconGrad)" filter="url(#shadow)"/>
+
+  <!-- Inner highlight -->
+  <circle cx="256" cy="220" r="90" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Lightning bolt -->
+  <path d="M 276 148 L 224 268 L 258 268 L 236 364 L 296 232 L 258 232 Z"
+        fill="url(#boltGrad)" filter="url(#glow)"/>
+
+  <!-- Green accent dot -->
+  <circle cx="320" cy="180" r="14" fill="#3ecf8e" opacity="0.9"/>
+  <circle cx="320" cy="180" r="8" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="175" cy="320" r="6" fill="#7c6ef0" opacity="0.6"/>
+  <circle cx="155" cy="200" r="4" fill="#9c6ef0" opacity="0.4"/>
+  <circle cx="340" cy="330" r="5" fill="#3ecf8e" opacity="0.4"/>
+
+</svg>
