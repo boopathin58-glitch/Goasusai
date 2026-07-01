@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nexusai-h9tz.onrender.com/sitemap.xml
