@@ -69,6 +69,15 @@ Be clear, accurate, and thorough. Use markdown formatting for code, lists, and s
     res.status(500).json({ error: 'Server error: ' + err.message });
   }
 });
+//for digital marketting
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
+});
+
+app.get('/sitemap.xml', (req, res) => {
+  res.type('application/xml');
+  res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
 
 // All other routes → serve frontend
 app.get('*', (req, res) => {
