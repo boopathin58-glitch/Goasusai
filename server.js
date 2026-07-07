@@ -27,7 +27,7 @@ app.post('/api/chat', async (req, res) => {
     return res.status(400).json({ error: 'Invalid messages format' });
   }
 
-  const SYSTEM = `You are NexusAI, a highly capable universal AI assistant. You can help with anything:
+  const SYSTEM = `You are GoasusAI, a highly capable universal AI assistant. You can help with anything:
 - Programming & debugging (Python, JS, TypeScript, Go, Rust, SQL, etc.)
 - Mathematics, science, physics, chemistry, biology
 - Fitness, nutrition, gym plans, health advice
@@ -86,7 +86,7 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;
-  console.log(`\n✅  NexusAI running at ${url}`);
+  console.log(`\n✅  GoasusAI running at ${url}`);
   console.log(`🔒  API key is secure — hidden in .env, never sent to browser`);
   console.log(`\n🌐  Opening browser automatically...\n`);
 
