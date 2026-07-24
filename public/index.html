@@ -4,11 +4,11 @@
 <meta name="google-site-verification" content="9q2yMgY-F00lX4zk_uf-HTjzYxHwM22NMswKngrDhtw" />
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>RaxusAI — Ask Anything, Get Everything</title>
+<title>RaxusAI - Free AI Chat Assistant, AI Code Generator & AI Writing Tool</title>
 <link rel="icon" type="image/svg+xml" href="icon.svg"/>
 <link rel="apple-touch-icon" href="icon.svg"/>
 <meta name="theme-color" content="#7c6ef0"/>
-<meta name="description" content="RaxusAI — Universal AI Assistant. Ask anything, get everything."/>
+<meta name="description" content="RaxusAI is a free AI assistant for coding, writing, mathematics, learning and productivity."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -335,8 +335,25 @@ a{color:var(--purple);text-decoration:none}a:hover{text-decoration:underline}
   .input-section{padding:12px 20px 16px}
 }
 </style>
+
+<meta name="keywords" content="RaxusAI, AI Assistant, AI Chatbot, AI Code Generator, AI Writing Assistant, AI Learning">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://raxusai.vercel.app/">
+<meta property="og:title" content="RaxusAI - Free AI Assistant">
+<meta property="og:description" content="AI assistant for coding, writing, learning and productivity.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raxusai.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
+
+<section class="seo-content">
+<h1>RaxusAI - Free AI Assistant</h1>
+<p>RaxusAI is an advanced AI assistant that helps with programming, coding, mathematics, writing, homework, science, history, business and general knowledge.</p>
+<h2>Features</h2><ul><li>AI Chat Assistant</li><li>AI Code Generator</li><li>AI Writing Assistant</li><li>AI Math Solver</li></ul>
+</section>
+
 
 <!-- Hidden file inputs -->
 <input type="file" id="fi-doc" multiple accept=".pdf,.txt,.doc,.docx,.csv,.json,.py,.js,.ts,.html,.css,.md,.xml" style="display:none" onchange="onFileSelect(event,'doc')"/>
@@ -926,5 +943,6 @@ function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMe
 function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,180)+'px';document.getElementById('char-hint').textContent=el.value.length>100?el.value.length+' chars':'';}
 function exportChat(){const cv=conversations.find(c=>c.id===currentConvoId);if(!cv||!cv.msgs.length){alert('No messages to export.');return;}let txt=`# ${cv.title}\nExported from RaxusAI\n\n`;cv.msgs.forEach(m=>{txt+=`**${m.role==='user'?'You':'RaxusAI'}**\n${m.content}\n\n---\n\n`;});const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'text/markdown'}));a.download='Raxusai-chat.md';a.click();}
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"RaxusAI","url":"https://raxusai.vercel.app"}</script>
 </body>
 </html>
